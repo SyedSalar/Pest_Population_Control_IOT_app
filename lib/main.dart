@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Splash Screen',
-      theme: ThemeData(primarySwatch: Colors.green),
+      theme: ThemeData.dark(),
       home: MySplashScreen(),
       debugShowCheckedModeBanner: false,
     );
