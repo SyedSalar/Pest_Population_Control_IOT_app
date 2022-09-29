@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
         MyHomePage.id: (context) => MyHomePage(),
         MyImage.id: (context) => MyImage(),
       },
-      title: 'Splash Screen',
+      title: 'NCAI APP',
       theme: ThemeData(primarySwatch: Colors.green),
       home: MySplashScreen(),
       debugShowCheckedModeBanner: false,

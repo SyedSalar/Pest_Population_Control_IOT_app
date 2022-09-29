@@ -6,7 +6,7 @@ import 'package:phone_authentication/viewimage.dart';
 import 'home.dart';
 
 class MySignUp extends StatefulWidget {
-  static var id;
+  static String id = 'signup';
 
   @override
   State<MySignUp> createState() => _MySignUpState();
@@ -23,7 +23,7 @@ class _MySignUpState extends State<MySignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Firebase Phone Login'),
+        title: const Text('Phone Login'),
       ),
       body: Container(
         width: double.infinity,

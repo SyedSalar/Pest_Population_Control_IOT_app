@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:phone_authentication/signup.dart';
 
 class MySplashScreen extends StatefulWidget {
-  static var id;
+  static String id = 'splashscreen';
 
   @override
   State<MySplashScreen> createState() => _MySplashScreenState();
