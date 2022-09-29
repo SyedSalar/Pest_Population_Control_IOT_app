@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:phone_authentication/viewimage.dart';
 
 class MyHomePage extends StatefulWidget {
+  static var id;
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }

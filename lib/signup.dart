@@ -6,6 +6,8 @@ import 'package:phone_authentication/viewimage.dart';
 import 'home.dart';
 
 class MySignUp extends StatefulWidget {
+  static var id;
+
   @override
   State<MySignUp> createState() => _MySignUpState();
 }
@@ -91,12 +93,29 @@ class _MySignUpState extends State<MySignUp> {
       verificationCompleted: (PhoneAuthCredential credential) async {
         await auth.signInWithCredential(credential).then((value) {
           print("You are logged in successfully");
+          Fluttertoast.showToast(
+              msg: "You are logged in successfully",
+              toastLength: Toast.LENGTH_SHORT,
+              gravity: ToastGravity.BOTTOM,
+              timeInSecForIosWeb: 1,
+              backgroundColor: Colors.green,
+              textColor: Colors.white,
+              fontSize: 16.0);
+
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (context) => MyHomePage()));
         });
       },
       verificationFailed: (FirebaseAuthException e) {
         print(e.message);
+        Fluttertoast.showToast(
+            msg: "Login Failed! Please enter number like +923331234567",
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0);
       },
       codeSent: (String verificationId, int? resendToken) {
         otpVisibility = true;

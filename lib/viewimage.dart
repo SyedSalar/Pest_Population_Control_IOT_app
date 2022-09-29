@@ -3,6 +3,8 @@ import 'package:firebase_image/firebase_image.dart';
 
 class MyImage extends StatelessWidget {
   String a = '';
+
+  static var id;
   @override
   Widget build(BuildContext context) {
     a = 'gs://esp32cam-device.appspot.com/RecentData/recentphoto';
